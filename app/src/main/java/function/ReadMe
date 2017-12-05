@@ -2,3 +2,7 @@
 
 该文件夹下的文件主要是：
 某些特殊功能的实现方案或模版，如懒加载、toolbar隐藏显示、线程转换、缓存方案……
+
+2017/12/5
+增加：RecyclerViewDivider，RecyclerView每个item的分割线
+
