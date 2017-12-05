@@ -7,3 +7,5 @@
 增加：RecyclerViewDivider，RecyclerView每个item的分割线
 
 增加：RecyclerView的动画效果实现
+
+增加：SpacesItemDecoration 分割线
