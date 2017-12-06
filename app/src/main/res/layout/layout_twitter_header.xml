@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.goweather.function.news.ui.TwitterRefreshHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/refresh_header_height_twitter"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="48dp"
+            android:layout_toLeftOf="@+id/tvRefresh"
+            android:background="@mipmap/twitter_pull_arrow" />
+
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="48dp"
+            android:layout_toLeftOf="@+id/tvRefresh"
+            android:background="@mipmap/qq_refresh_success" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleSmallInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tvRefresh" />
+
+        <ImageView
+            android:id="@+id/progressbar_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/forecast_info_base_sun"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRefresh"
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressbar_image"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</com.jiubang.goweather.function.news.ui.TwitterRefreshHeaderView>

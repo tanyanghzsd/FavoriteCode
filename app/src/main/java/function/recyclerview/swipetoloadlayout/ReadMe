@@ -1,0 +1,22 @@
+
+可自定义header 和 footer
+可满足各种需求
+
+借鉴自：https://github.com/Aspsine/SwipeToLoadLayout
+
+布局
+根布局使用SwipeToLoadLayout，子布局分别是TwitterRefreshHeaderView、RecyclerView和SwipeLoadMoreFooterLayout
+
+在activity中设置OnRefreshListener和OnLoadMoreListener
+监听RecyclerView滑动事件，滑动到底部调用loadMore
+
+recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                if (newState == RecyclerView.SCROLL_STATE_IDLE ){
+                    if (!ViewCompat.canScrollVertically(recyclerView, 1)){
+                        swipeToLoadLayout.setLoadingMore(true);
+                    }
+                }
+            }
+        });

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiubang.goweather.function.news.ui.ClassicLoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/load_more_footer_height_classic">
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleSmallInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tvLoadMore" />
+
+        <ImageView
+            android:id="@+id/progressbar_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/forecast_info_base_sun" />
+
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/tvLoadMore"
+            android:background="@mipmap/qq_refresh_success" />
+
+        <TextView
+            android:id="@+id/tvLoadMore"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/progressbar_image"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:text="@string/pull_to_refresh_refreshing_label"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</com.jiubang.goweather.function.news.ui.ClassicLoadMoreFooterView>
