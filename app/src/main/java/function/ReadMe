@@ -11,3 +11,6 @@
 增加：SpacesItemDecoration 分割线
 
 增加：可下拉刷新、上拉加载的SwipeRefreshRecyclerView
+
+2017/12/10
+增加：动态权限管理
