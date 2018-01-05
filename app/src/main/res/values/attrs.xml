@@ -35,4 +35,8 @@
         <attr name="containerId" format="integer|reference"/>
         <attr name="navigateTabTextSize" format="dimension|reference"/>
     </declare-styleable>
+
+    <declare-styleable name="GoPlayProportionLayout">
+        <attr name="proportion" format="float" />
+    </declare-styleable>
 </resources>
