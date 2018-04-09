@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="28dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:singleLine="true"
+    android:background="@drawable/bg_hot_word_white"
+    android:gravity="center"
+    android:text="测试版dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd本"
+    android:textColor="#bdbdbd"
+    android:textSize="12sp"></TextView>
