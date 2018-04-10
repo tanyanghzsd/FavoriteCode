@@ -1,0 +1,39 @@
+mRvContent.setOnScrollListener(new RecyclerView.OnScrollListener() {
+                @Override
+                public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                    if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                        if (!ViewCompat.canScrollVertically(recyclerView, 1) && canLoadMore) {
+                            Log.d("load more", "滑动底部");
+                            if (!isLoading) {
+                                isLoading = true;
+                                offset += LIMIT;
+                                searchOnlineAudios(offset, onlineSearchKey);
+                            }
+                        }
+                    }
+
+                    if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                        if (mContentRecyclerViewAdapter.isScrolling() && scrolled) {
+                            mContentRecyclerViewAdapter.setScrolling(false);
+                            mContentRecyclerViewAdapter.notifyDataSetChanged();
+                        }
+                        scrolled = false;
+                    }
+                    super.onScrollStateChanged(recyclerView, newState);
+                }
+            });
+
+
+            mRvContent.addOnScrollListener(new RecyclerView.OnScrollListener() {
+                @Override
+                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                    super.onScrolled(recyclerView, dx, dy);
+                    if (dy != 0) {
+                        scrolled = true;
+                    }
+
+                    if (Math.abs(dy) < 20) {
+                        return;
+                    }
+                }
+            });
